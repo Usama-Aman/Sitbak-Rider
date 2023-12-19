@@ -1,0 +1,70 @@
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.android.sitbak.home.popups.region_popup.RegionFragmentVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintHeight_percent="0.45">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/heavy_metal"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:text="Region"
+            android:textColor="@color/tasman7"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRegion"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/marshland"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            tools:itemCount="50"
+            tools:listitem="@layout/region_item_layout" />
+
+        <RelativeLayout
+            android:id="@+id/llBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/marshland"
+            android:paddingHorizontal="@dimen/_30sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/rvRegion">
+
+            <TextView
+                android:id="@+id/btnOK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/green_circle"
+                android:fontFamily="@font/inter_regular"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="OK"
+                android:textColor="@color/green_900"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

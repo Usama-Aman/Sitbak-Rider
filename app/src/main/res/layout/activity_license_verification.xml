@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.android.sitbak.auth.add_photo.AddPhotoVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/heavy_metal"
+        tools:context=".auth.age_verification.AgeVerificationActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/heavy_metal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/inter_bold"
+                android:text="License verification"
+                android:textColor="@color/tasman7"
+                android:textSize="19sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center_horizontal"
+            android:text="In order to verify your identity, please make sure"
+            android:textColor="@color/tasman7"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topBarLayout"
+            tools:targetApi="p" />
+
+        <TextView
+            android:id="@+id/tvPoints"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:fontFamily="@font/inter_regular"
+            android:text="@string/your_driver_s_license_is_up_to_date_take_photo_in_a_well_lit_flat_surface_take_photo_of_front_and_back_of_driver_s_license"
+            android:textColor="@color/tasman7"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription"
+            tools:targetApi="p" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvImage"
+            android:layout_width="224dp"
+            android:layout_height="144dp"
+            android:layout_marginTop="@dimen/_25sdp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPoints">
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_license" />
+
+        </androidx.cardview.widget.CardView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivCross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_100sdp"
+            android:elevation="5dp"
+            android:src="@drawable/ic_cross_small"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/cvImage"
+            app:layout_constraintLeft_toRightOf="@id/cvImage"
+            app:layout_constraintRight_toRightOf="@id/cvImage"
+            app:layout_constraintTop_toTopOf="@id/cvImage" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:drawableStart="@drawable/ic_clock_small"
+            android:drawablePadding="@dimen/_4sdp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center_horizontal"
+            android:text="It will take a few minutes to verify your account ..."
+            android:textColor="@color/tasman7"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvImage"
+            tools:targetApi="p" />
+
+        <TextView
+            android:id="@+id/tvAccountVerified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:drawablePadding="@dimen/_4sdp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center_horizontal"
+            android:text="Your account is verified"
+            android:textColor="@color/green_900"
+            android:textSize="15sp"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/ic_green_tick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvImage" />
+
+        <LinearLayout
+            android:id="@+id/llTakePicture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/bg_btn_main_green_stroke"
+            app:layout_constraintEnd_toEndOf="@id/cvImage"
+            app:layout_constraintStart_toStartOf="@id/cvImage"
+            app:layout_constraintTop_toBottomOf="@id/tvTime">
+
+            <TextView
+                android:id="@+id/btnTakePicture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_9sdp"
+                android:text="Take a picture"
+                android:textColor="@color/green_900"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llGallery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/bg_btn_main_green_stroke"
+            app:layout_constraintEnd_toEndOf="@id/cvImage"
+            app:layout_constraintStart_toStartOf="@id/cvImage"
+            app:layout_constraintTop_toBottomOf="@id/llTakePicture">
+
+            <TextView
+                android:id="@+id/btnAddFromGallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_9sdp"
+                android:text="Add from gallery"
+                android:textColor="@color/green_900"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginBottom="@dimen/_19sdp"
+            android:background="@drawable/btn_main_disable"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:enabled="false"
+                android:focusable="true"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="Continue"
+                android:textColor="@color/green_100"
+                android:textSize="@dimen/_12ssp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

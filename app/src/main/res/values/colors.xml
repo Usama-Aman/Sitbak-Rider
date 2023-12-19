@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--    <color name="heavy_metal">#1C1D1C</color>-->
+
+    <color name="finlandia">#565C56</color>
+
+    <color name="white_off_5">#0DFFFFFF</color>
+
+    <color name="lunar_green_alpha_13">#783B423D</color>
+
+    <color name="white_alpha_19">#30FFFFFF</color>
+
+    <color name="marshland">#101110</color>
+    <color name="popup_color">#101110</color>
+
+    <color name="white7">#07FFFFFF</color>
+    <color name="white93">#20FFFFFF</color>
+
+    <color name="heavy_metal">#181918</color>
+    <color name="teal_400">#378493</color>
+
+    <color name="tasman7">#CCD7CC</color>
+    <color name="app_main_text_off_54">#8ACCD7CC</color>
+    <color name="app_main_text_white">#CCD7CC</color>
+    <color name="shift_ticket_text_white">#717671</color>
+
+    <color name="mine_shaft">#323232</color>
+    <color name="et_otp">#282928</color>
+
+
+    <color name="green_900">#076A04</color>
+    <color name="green_900_off_54">#8A076A04</color>
+    <color name="green_900_off_27">#8A076A04</color>
+    <color name="green_50">#E9EDE9</color>
+    <color name="green_100">#C9CFC9</color>
+    <color name="tasman">#CDD1CD</color>
+    <color name="lunar_green">#373937</color>
+    <color name="green_200">#A1A9A1</color>
+    <color name="gray_nurse">#F0F2F0</color>
+    <color name="tasman_2">#DAE1DA</color>
+    <color name="green_700">#565C56</color>
+    <color name="blue_grey_900">#421E392E</color>
+    <color name="envy">#2E94A694</color>
+    <color name="popup_topBar_color">#1C1D1C</color>
+    <color name="popup_topBar_Delete_color">#2E302E</color>
+    <color name="red_a400">#8AFF3E49</color>
+    <color name="pink_700">#C3323B</color>
+    <color name="load_more_item">#565C56</color>
+
+
+    <color name="schedule_item_background">#181918</color>
+    <color name="bottomBar_color">#181A18</color>
+    <color name="home_bg">#101110</color>
+    <color name="tip_bg">#FAFF00</color>
+    <color name="max_tip">#333515</color>
+    <color name="bg_app">#181818</color>
+    <color name="bg_app_">#101110</color>
+    <color name="color_processing_bg">#281D34</color>
+    <color name="title_processing">#6A2FA7</color>
+    <color name="red">#FF3E49</color>
+    <color name="red_a54">#8AFF3E49</color>
+    <color name="diaglogue_bg">#101110</color>
+    <color name="bg_dialogue_header">#1C1D1C</color>
+    <color name="dialogue_head">#565C56</color>
+    <color name="diaglogue_item_color">#CCD7CC</color>
+    <color name="green_text">#076A04</color>
+
+    <color name="disable_buttons">#1AE1E4E1</color>
+
+
+    <color name="delivery_status_pending">#5F88F2</color>
+    <color name="delivery_status_pending_text">#805F88F2</color>
+    <color name="delivery_status_pending_background">#1F5F88F2</color>
+    <color name="delivery_status_ready">#FFA217</color>
+    <color name="delivery_status_ready_text">#80FFA217</color>
+    <color name="delivery_status_ready_background">#1FFFA217</color>
+    <color name="delivery_status_picked">#9E3EFF</color>
+    <color name="delivery_status_picked_text">#809E3EFF</color>
+    <color name="delivery_status_picked_background">#1F9E3EFF</color>
+    <color name="delivery_status_new">#CCD7CC</color>
+    <color name="delivery_status_new_text">#80CCD7CC</color>
+    <color name="delivery_status_new_background">#1FCCD7CC</color>
+    <color name="delivery_status_new_hot">#FAFF00</color>
+    <color name="delivery_status_new_hot_text">#80FAFF00</color>
+    <color name="delivery_status_new_hot_background">#1FFAFF00</color>
+
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_btn_main_green_stroke"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="12dp"
+            android:text="Every Saturday"
+            android:textColor="@color/green_900"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,SmallSp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

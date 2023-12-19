@@ -1,0 +1,184 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    
+
+    <com.chauthai.swipereveallayout.SwipeRevealLayout
+        android:id="@+id/swipeRevealLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?selectableItemBackground"
+        app:dragEdge="right"
+        app:mode="same_level">
+
+        <!-- Your secondary layout here -->
+        <FrameLayout
+            android:id="@+id/flDeleteSchdule"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="match_parent"
+            android:background="@color/black">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgdel"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_circle_del_red"
+                    android:padding="@dimen/_13sdp"
+                    android:src="@drawable/ic_del"
+                    android:text="23\nTue"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="56dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="Refuse"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgdel" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+        <!-- Your main layout here -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="5dp"
+                app:cardBackgroundColor="@color/schedule_item_background"
+                app:cardCornerRadius="@dimen/_5sdp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/topLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/popup_topBar_Delete_color"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_regular"
+                            android:paddingVertical="9dp"
+                            android:text="One Time"
+                            android:textColor="@color/tasman"
+                            android:textFontWeight="400"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/lay2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/topLay">
+
+                        <TextView
+                            android:id="@+id/tvTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="3:30 – 4:00 PM"
+                            android:textColor="@color/tasman"
+                            android:textFontWeight="400"
+                            android:textSize="17sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="2h45m"
+                            android:textColor="@color/finlandia"
+                            android:textFontWeight="400"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@id/tvTime"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/tvTime" />
+
+                        <View
+                            android:id="@+id/div1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/finlandia"
+                            app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivRound"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/location"
+                            app:civ_border_color="@color/finlandia"
+                            app:civ_border_width="@dimen/_2sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvAddress"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tvAddress" />
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="16dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/inter_regular"
+                            android:maxLines="1"
+                            android:text="42 Lenina Avenue, DeltaNine S..."
+                            android:textColor="@color/tasman"
+                            android:textFontWeight="400"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toStartOf="@+id/tvKM"
+                            app:layout_constraintStart_toEndOf="@+id/ivRound"
+                            app:layout_constraintTop_toBottomOf="@+id/div1" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+    </com.chauthai.swipereveallayout.SwipeRevealLayout>
+</layout>

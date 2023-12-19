@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "479355710844",
+    "project_id": "sitbak-26660",
+    "storage_bucket": "sitbak-26660.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479355710844:android:fb5702102b47fc5a3288f9",
+        "android_client_info": {
+          "package_name": "com.codingpixel.sitbak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "479355710844-fs4mlafp323g3m2a1h5ce20tqt9rumsf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp95IpEN0aTKD00_jS7QwE8DwcBBHql-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "479355710844-fs4mlafp323g3m2a1h5ce20tqt9rumsf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479355710844:android:26f9d41e294ab4293288f9",
+        "android_client_info": {
+          "package_name": "com.codingpixel.sitbak.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "479355710844-fs4mlafp323g3m2a1h5ce20tqt9rumsf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp95IpEN0aTKD00_jS7QwE8DwcBBHql-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "479355710844-fs4mlafp323g3m2a1h5ce20tqt9rumsf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

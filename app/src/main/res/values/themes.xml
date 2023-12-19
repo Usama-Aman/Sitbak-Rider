@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SitBak" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/green_900</item>
+        <item name="colorPrimaryVariant">@color/green_900</item>
+        <item name="colorOnPrimary">@color/green_900</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/green_900</item>
+        <item name="colorSecondaryVariant">@color/green_900</item>
+        <item name="colorOnSecondary">@color/green_900</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:timePickerStyle">@style/MyTimePickerLight</item>
+        <!-- Customize your theme here. -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <!--To Hide the white screen at start-->
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <!-- Light Time Picker-->
+    <style name="MyTimePickerLight" parent="android:Widget.Material.Light.TimePicker">
+        <item name="android:headerBackground">@color/green_900</item>
+        <item name="android:numbersTextColor">@color/app_main_text_white</item>
+        <item name="android:numbersSelectorColor">@color/green_900</item>
+        <!--<item name="android:numbersBackgroundColor">#61E761</item>-->
+        <item name="android:background">@color/app_main_text_white</item>
+    </style>
+</resources>

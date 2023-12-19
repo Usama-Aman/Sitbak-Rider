@@ -1,0 +1,106 @@
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_splash_gradient"
+        tools:context=".activities.boarding.AppFlow">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:src="@drawable/splash"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAppFlowHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="APP FLOW"
+            android:textColor="@color/green_900"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/ivImage" />
+
+
+        <TextView
+            android:id="@+id/tvRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/green_circle"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Registration prototype"
+            android:textColor="@color/green_900"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvAppFlowHeading" />
+
+        <TextView
+            android:id="@+id/tvDelivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/green_circle"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Delivery"
+            android:textColor="@color/green_900"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvRegistration" />
+
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/green_circle"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Profile"
+            android:textColor="@color/green_900"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvDelivery" />
+
+        <TextView
+            android:id="@+id/tvNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/green_circle"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="News"
+            android:textColor="@color/green_900"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvProfile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

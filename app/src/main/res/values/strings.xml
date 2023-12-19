@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">SitBak Driver</string>
+    <string name="fast_delivery_for_you">FAST DELIVERY FOR YOU</string>
+    <string name="create_account">Create Account</string>
+    <string name="login">Login</string>
+    <string name="continue_as_guest">Continue as guest</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="start">Start</string>
+    <string name="enter_and_confirm_your_phone_number_to_create_an_account_we_will_send_you_a_text_with_a_verification_code">Enter and confirm your phone number to create an account. We will send you a text with a verification code</string>
+    <string name="send_code">Send code</string>
+    <string name="change_phone">Change phone</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="on_point">On Point</string>
+    <string name="pls_call_me_15_min_before_delivery">Pls call me 15 min before delivery</string>
+    <string name="accepted_for_delivery">Accept for delivery</string>
+    <string name="order_information">Order information</string>
+    <string name="client">Client</string>
+    <string name="sitbak_support_chat">Chat</string>
+    <string name="verify_id">Verify ID</string>
+    <string name="no_internet_connection">Please check your internet connection</string>
+    <string name="toast_success">Success</string>
+    <string name="toast_error">Error</string>
+    <string name="ok">OK</string>
+    <string name="_42_lenina_avenue_deltanine_s">42 Lenina Avenue, <font color="#565C56">DeltaNine S... </font></string>
+    <string name="don_t_have_an_account_login_now">Have an account?<font color="#DC3F5E"><u> Login</u></font> </string>
+    <string name="driver_app">DRIVER APP</string>
+    <string name="confirm_password">CONFIRM PASSWORD</string>
+    <string name="register_now">Register Now</string>
+    <string name="sign_up">Sign up</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="verify_now">Verify Now</string>
+    <string name="send">Send</string>
+    <string name="your_email_address_has_been_verified"><![CDATA[Your email address has been verified. please do sign in & complete your profile.]]></string>
+    <string name="your_phone_number_has_been_verified"><![CDATA[Your phone number has been verified. please do sign in & complete your profile.]]></string>
+    <string name="your_driver_s_license_is_up_to_date_take_photo_in_a_well_lit_flat_surface_take_photo_of_front_and_back_of_driver_s_license">Your driver’s license is up-to-date\nTake photo in a well-lit flat surface \nTake photo of front and back of driver’s license</string>
+    <string name="email_verified">Email Verified!</string>
+    <string name="phone_number_verified">Phone Number Verified!</string>
+    <string name="account_pending_message">Our Team is reviewing your \napplication. You will be able to use \napp after your account after you \naccount approved.</string>
+    <string name="back_to_login">Back to login</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="phone">Phone</string>
+    <string name="recover_by_phone">Recovery by Phone</string>
+    <string name="included_tip">included %s tip</string>
+    <string name="order_items_no">%s items</string>
+    <string name="available_tickets_tab">Available</string>
+
+    <string name="change_email">Change Email</string>
+    <string name="recovery_by_email">Recovery by Email</string>
+    <string name="old_password">OLD PASSWORD</string>
+    <string name="change_password">Change Password</string>
+    <string name="new_password">NEW PASSWORD</string>
+
+
+    <string name="delivery_status_pending">Being prepared</string>
+    <string name="delivery_status_ready">Ready</string>
+    <string name="delivery_status_picked">Delivery</string>
+    <string name="time_left_for_delivery">left %s</string>
+    <string name="add_availability">Add availability</string>
+    <string name="edit_availability">Edit availability</string>
+
+</resources>

@@ -1,0 +1,173 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.android.sitbak.auth.phone_number.PhoneVerificationVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_app_"
+        tools:context=".auth.password_recovery.PasswordRecovery">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/heavy_metal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Phone"
+                android:textColor="@color/tasman7"
+                android:textSize="19sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topBarLayout"
+            android:id="@+id/tvDescription"
+            android:visibility="gone"
+            android:layout_marginTop="25dp"
+            android:text="Enter your registered phone number"
+            android:textColor="@color/tasman7"
+            android:textSize="15sp"
+            android:fontFamily="@font/inter_regular"
+            android:textFontWeight="400"/>
+
+        <TextView
+            android:id="@+id/tvEmailHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/inter_regular"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="Phone"
+            android:textAllCaps="true"
+            android:textColor="@color/finlandia"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_9sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+        <LinearLayout
+            android:id="@+id/llCountryCodePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/white_93_back_rectangle"
+            android:gravity="center_vertical"
+            android:paddingVertical="@dimen/_4sdp"
+            app:layout_constraintTop_toBottomOf="@id/tvEmailHeading"
+            tools:ignore="RtlSymmetry">
+
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/countryCodePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:ccpDialog_keyboardAutoPopup="false"
+                app:ccp_contentColor="@color/tasman_2"
+                app:ccp_defaultNameCode="US"
+                app:ccp_showArrow="false"
+                app:ccp_showFlag="false"
+                app:ccp_showNameCode="false"
+                app:ccp_textSize="@dimen/_16ssp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/white_93_back_rectangle"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="@color/tasman7"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintTop_toBottomOf="@id/tvEmailHeading"
+                tools:ignore="TextFields" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llRecoverByEmail"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_42sdp"
+            android:layout_marginBottom="@dimen/_17sdp"
+            android:visibility="gone"
+            android:background="@drawable/finlandia_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/btnRecoverByEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="Recover by email"
+                android:textColor="@color/finlandia"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/green_900_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_12sdp"
+            android:text="@string/send"
+            android:textColor="@color/tasman7"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/llRecoverByEmail" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,130 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_bg"
+        tools:context=".home.HomeActivity">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomLay"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/bottomLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@color/bottomBar_color"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <LinearLayout
+                android:id="@+id/layTickets"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="5dp"
+                android:paddingEnd="30dp">
+
+                <ImageView
+                    android:id="@+id/ivTicket"
+                    android:layout_width="@dimen/bottom_icons_width"
+                    android:layout_height="@dimen/bottom_icons_height"
+                    android:src="@drawable/ic_ticket_white" />
+
+                <TextView
+                    android:id="@+id/tvTicket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="Tickets"
+                    android:textColor="@color/tasman7"
+                    android:textFontWeight="500"
+                    android:textSize="10sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/laySchedule"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/ivSchedule"
+                    android:layout_width="@dimen/bottom_icons_width"
+                    android:layout_height="@dimen/bottom_icons_height"
+                    android:src="@drawable/ic_white_schedule" />
+
+                <TextView
+                    android:id="@+id/tvSchedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="Schedule"
+                    android:textColor="@color/tasman7"
+                    android:textFontWeight="500"
+                    android:textSize="10sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingStart="30dp"
+                android:orientation="vertical"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="@dimen/bottom_icons_width"
+                    android:layout_height="@dimen/bottom_icons_height"
+                    android:src="@drawable/ic_white_profile_driver" />
+
+                <TextView
+                    android:id="@+id/tvProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="Profile"
+                    android:textColor="@color/tasman7"
+                    android:textFontWeight="500"
+                    android:textSize="10sp"  />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

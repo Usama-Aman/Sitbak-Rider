@@ -1,0 +1,310 @@
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@drawable/transparent_corner_rectangle"
+        android:elevation="0dp"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#95000000"
+                android:paddingHorizontal="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="Done"
+                    android:textColor="@color/tasman"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="# R788 98"
+                    android:textColor="#50CCD7CC"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lay2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/heavy_metal"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/topLay">
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="3:30 – 4:00 PM"
+                    android:textColor="@color/tasman"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="$24.00"
+                    android:textColor="@color/tasman"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvTime" />
+
+
+                <TextView
+                    android:id="@+id/tvDateView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="left 2h45m"
+                    android:textColor="@color/finlandia"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+
+                <TextView
+                    android:id="@+id/tvIncludeTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="included $5.00 tip"
+                    android:textColor="@color/finlandia"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvDateView" />
+
+
+                <View
+                    android:id="@+id/div1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/finlandia"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDateView" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivRound"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:src="@drawable/transparent_circle"
+                    app:civ_border_color="@color/finlandia"
+                    app:civ_border_width="@dimen/_2sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvAddress"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvAddress" />
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter_regular"
+                    android:maxLines="1"
+                    android:text="42 Lenina Avenue, DeltaNine S..."
+                    android:textColor="@color/tasman"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_15sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/tvKM"
+                    app:layout_constraintStart_toEndOf="@+id/ivRound"
+                    app:layout_constraintTop_toBottomOf="@+id/div1" />
+
+                <TextView
+                    android:id="@+id/tvKM"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/gray_circle"
+                    android:gravity="center"
+                    android:text="5.8\nkm"
+                    android:textColor="@color/tasman"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/verticalView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/verticalView" />
+
+                <View
+                    android:id="@+id/verticalView"
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="@color/finlandia"
+                    app:layout_constraintEnd_toEndOf="@+id/ivRound"
+                    app:layout_constraintStart_toStartOf="@id/ivRound"
+                    app:layout_constraintTop_toBottomOf="@id/ivRound" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivRound2"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:src="@drawable/transparent_circle"
+                    app:civ_border_color="@color/finlandia"
+                    app:civ_border_width="@dimen/_2sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/verticalView" />
+
+
+                <TextView
+                    android:id="@+id/tvAddress1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter_regular"
+                    android:maxLines="1"
+                    android:text="9A Obi-Wan K. Street"
+                    android:textColor="@color/tasman"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_15sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivRound2"
+                    app:layout_constraintEnd_toStartOf="@+id/tvKM"
+                    app:layout_constraintStart_toEndOf="@+id/ivRound"
+                    app:layout_constraintTop_toTopOf="@+id/ivRound2" />
+
+
+                <View
+                    android:id="@+id/div2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/finlandia"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAddress1" />
+
+
+                <TextView
+                    android:id="@+id/tvClientHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="Client"
+                    android:textColor="@color/finlandia"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/tvClientName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvClientName" />
+
+                <TextView
+                    android:id="@+id/tvClientName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter_regular"
+                    android:maxLines="1"
+                    android:text="Joshua Simpson"
+                    android:textColor="@color/tasman"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvClientHead"
+                    app:layout_constraintTop_toBottomOf="@+id/div2" />
+
+
+                <TextView
+                    android:id="@+id/tvOrderHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="Order"
+                    android:textColor="@color/finlandia"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/tvOrderName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvOrderName" />
+
+                <TextView
+                    android:id="@+id/tvOrderName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter_regular"
+                    android:maxLines="1"
+                    android:text="3 items"
+                    android:textColor="@color/tasman"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvOrderHead"
+                    app:layout_constraintTop_toBottomOf="@+id/tvClientName" />
+
+
+                <TextView
+                    android:id="@+id/tvNoteHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="Note"
+                    android:textColor="@color/finlandia"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/tvNote"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvNote" />
+
+                <TextView
+                    android:id="@+id/tvNote"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter_regular"
+                    android:maxLines="1"
+                    android:text="Pls call me 15 min before delivery"
+                    android:textColor="@color/tasman"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvNoteHead"
+                    app:layout_constraintTop_toBottomOf="@+id/tvOrderName" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

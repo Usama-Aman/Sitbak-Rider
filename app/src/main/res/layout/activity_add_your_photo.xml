@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.android.sitbak.auth.add_photo.AddPhotoVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/heavy_metal"
+        tools:context=".auth.add_photo.AddYourPhotoActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/heavy_metal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Add your photo"
+                android:textColor="@color/tasman7"
+                android:textSize="19sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center_horizontal"
+            android:text="Please add your photo to verify your ID card"
+            android:textColor="@color/tasman7"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topBarLayout"
+            tools:targetApi="p" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivCross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_cross_small"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@id/ivProfileImage"
+            app:layout_constraintTop_toTopOf="@id/ivProfileImage" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="224dp"
+            android:layout_height="224dp"
+            android:layout_marginTop="@dimen/_42sdp"
+            android:background="@drawable/ic_round_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+        <ImageView
+            android:id="@+id/ivPlaceHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_person"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfileImage"
+            app:layout_constraintEnd_toEndOf="@id/ivProfileImage"
+            app:layout_constraintStart_toStartOf="@id/ivProfileImage"
+            app:layout_constraintTop_toTopOf="@id/ivProfileImage" />
+
+        <LinearLayout
+            android:id="@+id/llTakePicture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:background="@drawable/bg_btn_main_green_stroke"
+            app:layout_constraintEnd_toEndOf="@id/ivProfileImage"
+            app:layout_constraintStart_toStartOf="@id/ivProfileImage"
+            app:layout_constraintTop_toBottomOf="@id/ivProfileImage">
+
+            <TextView
+                android:id="@+id/btnTakePicture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/inter_regular"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_9sdp"
+                android:text="Take a picture"
+                android:textColor="@color/tasman7"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llGallery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/bg_btn_main_green_stroke"
+            app:layout_constraintEnd_toEndOf="@id/ivProfileImage"
+            app:layout_constraintStart_toStartOf="@id/ivProfileImage"
+            app:layout_constraintTop_toBottomOf="@id/llTakePicture">
+
+            <TextView
+                android:id="@+id/btnAddFromGallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/inter_regular"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_9sdp"
+                android:text="Add from gallery"
+                android:textColor="@color/tasman7"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginBottom="@dimen/_19sdp"
+            android:background="@drawable/btn_main_disable"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:enabled="false"
+                android:focusable="true"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="Continue"
+                android:textColor="@color/green_100"
+                android:textSize="@dimen/_12ssp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

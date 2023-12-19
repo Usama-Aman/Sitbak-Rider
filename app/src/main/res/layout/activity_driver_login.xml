@@ -1,0 +1,206 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.android.sitbak.auth.login.LoginVM" />
+    </data>
+
+    <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/loginMainConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/heavy_metal"
+        android:fillViewport="true"
+        tools:context=".auth.DrvierLogin">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/driver_login_gradient"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/tvSitBak"
+                    android:layout_width="140dp"
+                    android:layout_height="87dp"
+                    android:src="@drawable/sitbaak"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDriverApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/driver_app"
+                    android:textColor="@color/tasman7"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSitBak" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvEmailHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:fontFamily="@font/inter_regular"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="EMAIL"
+                android:textColor="@color/finlandia"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/topLayout" />
+
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/white_7_bakcground_rectangle"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textColor="@color/tasman7"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@id/tvEmailHeading" />
+
+            <TextView
+                android:id="@+id/tvPasswordHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/inter_regular"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="PASSWORD"
+                android:textColor="@color/finlandia"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/white_7_bakcground_rectangle"
+                android:inputType="textPassword"
+                android:maxLength="15"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textColor="@color/tasman7"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@id/tvPasswordHead" />
+
+            <ImageView
+                android:id="@+id/ivPasswordToggle"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="5dp"
+                android:padding="3dp"
+                android:src="@drawable/ic_show_password"
+                app:layout_constraintBottom_toBottomOf="@id/etPassword"
+                app:layout_constraintRight_toRightOf="@id/etPassword"
+                app:layout_constraintTop_toTopOf="@id/etPassword" />
+
+
+            <ImageView
+                android:id="@+id/ivFaceLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:src="@drawable/ic_happy_driver"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+            <TextView
+                android:id="@+id/btnSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/green_900_background"
+                android:fontFamily="@font/inter_regular"
+                android:gravity="center"
+                android:paddingVertical="15dp"
+                android:text="@string/common_signin_button_text"
+                android:textColor="@color/white"
+                android:textFontWeight="400"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/ivFaceLogin" />
+
+
+            <TextView
+                android:id="@+id/tvSignUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/finlandia_back"
+                android:fontFamily="@font/inter_regular"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/sign_up"
+                android:textColor="@color/finlandia"
+                android:textFontWeight="400"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvForgotPassword"
+                app:layout_constraintEnd_toStartOf="@id/tvForgotPassword"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvForgotPassword" />
+
+
+            <TextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/finlandia_back"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/inter_regular"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/forgot_password"
+                android:textColor="@color/finlandia"
+                android:textFontWeight="400"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvSignUp"
+                app:layout_constraintTop_toBottomOf="@id/btnSignIn" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</layout>
